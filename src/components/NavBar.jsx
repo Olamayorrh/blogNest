@@ -113,7 +113,7 @@ const NavBar = () => {
 
           {user ? (
             <div className="flex flex-col md:flex-row md:items-center items-start gap-3 md:gap-4">
-              <div className="flex items-center gap-2">
+              <Link to="/blogger/profile" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
                 <div className="w-8 h-8 lg:w-10 lg:h-10 rounded-full overflow-hidden border border-gray-200 dark:border-gray-700">
                   <img 
                     src={user?.avatar || "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=100&q=80"} 
@@ -124,7 +124,7 @@ const NavBar = () => {
                 <span className="font-medium text-sm lg:text-base">
                   {user.username?.split(' ')[0]}
                 </span>
-              </div>
+              </Link>
               <button
                 onClick={logout}
                 className="text-red-500 hover:text-red-600 font-medium text-sm lg:text-base transition-colors"
