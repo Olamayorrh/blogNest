@@ -1,0 +1,63 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "category": "BUSINESS",
+      "title": "The Art of Scaling: From Solo Creator to Thriving Agency",
+      "description": "Lessons learned while navigating the difficult transition from a single freelancer to managing a high-performance team of ten.",
+      "image": "article_business",
+      "author": {
+        "name": "Marcus Thorne",
+        "avatar": "author_liam",
+        "readTime": "5 min read"
+      }
+    },
+    {
+      "id": 2,
+      "category": "TECHNOLOGY",
+      "title": "Understanding the LLM Revolution: Beyond the Hype",
+      "description": "A deep dive into how large language models are actually being integrated into the modern software development lifecycle.",
+      "image": "article_technology",
+      "author": {
+        "name": "Sarah Jenkins",
+        "avatar": "author_maya",
+        "readTime": "12 min read"
+      }
+    },
+    {
+      "id": 3,
+      "category": "DESIGN",
+      "title": "Minimalism in UI: Why Less is Still More in 2024",
+      "description": "How the cleanest designs are often the most complex to execute, and why users continue to crave simplicity in an overcrowded digital space.",
+      "image": "write1",
+      "author": {
+        "name": "David Chen",
+        "avatar": "author_simon",
+        "readTime": "8 min read"
+      }
+    }
+  ],
+  "featuredAuthors": [
+    {
+      "id": 1,
+      "name": "Liam Peterson",
+      "role": "Tech Lead @Flow",
+      "avatar": "author_liam",
+      "isFollowing": false
+    },
+    {
+      "id": 2,
+      "name": "Maya Isabella",
+      "role": "UX Architect",
+      "avatar": "author_maya",
+      "isFollowing": false
+    },
+    {
+      "id": 3,
+      "name": "Dr. Simon K.",
+      "role": "Cultural Critic",
+      "avatar": "author_simon",
+      "isFollowing": true
+    }
+  ]
+}
