@@ -2,7 +2,7 @@ import React, { createContext, useCallback, useEffect, useState } from "react";
 
 export const userContext = createContext();
 
-const API_URL = "http://localhost:5000/api";
+const API_URL = "https://blognest-backend-foyt.onrender.com/api";
 
 // Decode a JWT token's payload without a library
 const isTokenExpired = (token) => {
