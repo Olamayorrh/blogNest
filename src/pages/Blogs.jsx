@@ -1,11 +1,9 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { userContext } from '../components/Context';
+import { userContext, API_URL, BASE_URL } from '../components/Context';
 import { useNavigate } from 'react-router';
 import { HiDotsVertical } from 'react-icons/hi';
 import { FiEdit, FiTrash2, FiPlus, FiSearch } from 'react-icons/fi';
 import { BsClipboardDataFill } from 'react-icons/bs';
-
-const API_URL = "http://localhost:5000/api";
 
 const Blogs = () => {
   const { user } = useContext(userContext);
@@ -128,7 +126,7 @@ const Blogs = () => {
                     <div className="flex items-center gap-4">
                       <div className="w-16 h-10 md:w-20 md:h-12 rounded-lg overflow-hidden shrink-0 border border-gray-200 dark:border-gray-700">
                         <img 
-                          src={blog.thumbnail ? `http://localhost:5000/${blog.thumbnail}` : 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=150&q=80'} 
+                          src={blog.thumbnail ? `${BASE_URL}/${blog.thumbnail}` : 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=150&q=80'} 
                           alt={blog.title}
                           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                         />

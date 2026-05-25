@@ -1,12 +1,10 @@
 import React, { useState, useRef, useMemo, useContext } from 'react';
 import JoditEditor from 'jodit-react';
-import { userContext } from '../components/Context';
+import { userContext, API_URL, BASE_URL } from '../components/Context';
 import { useNavigate, useSearchParams } from 'react-router';
 import { useEffect } from 'react';
 import { IoArrowBack } from 'react-icons/io5';
 import { FiUploadCloud } from 'react-icons/fi';
-
-const API_URL = "http://localhost:5000/api";
 
 const CreateBlog = () => {
   const { user, theme } = useContext(userContext);
@@ -42,7 +40,7 @@ const CreateBlog = () => {
             setCategory(data.category?.name || data.category || '');
             setIsPublished(data.isPublished || false);
             if (data.thumbnail) {
-              setPreview(`http://localhost:5000/${data.thumbnail}`);
+              setPreview(`${BASE_URL}/${data.thumbnail}`);
             }
           }
         } catch (error) {
@@ -136,6 +134,7 @@ const CreateBlog = () => {
       formData.append('title', title.trim());
       formData.append('subtitle', subtitle.trim());
       formData.append('description', description);
+      formData.append('content', description);
       formData.append('category', category);
       formData.append('isPublished', publish);
       if (thumbnail) {
